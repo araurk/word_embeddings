@@ -29,6 +29,10 @@ print(new_model)
 
 
 
+
+
+
+
 # plotting embeddings
 # get all embeddings (vectors)
 X = model.wv.vectors
