@@ -8,9 +8,13 @@ sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
 			['one', 'more', 'sentence'],
 			['and', 'the', 'final', 'sentence']]
 # train model
-model = Word2Vec(sentences, min_count=1, vector_size=200)
+model = Word2Vec(sentences, min_count=1)
 # summarize the loaded model
 print(model)
+
+model.wv.vectors
+model.wv.key_to_index
+
 # summarize vocabulary
 words = list(model.wv.key_to_index.keys())
 print(words)
@@ -26,7 +30,7 @@ print(new_model)
 
 
 # plotting embeddings
-# get all embeddings
+# get all embeddings (vectors)
 X = model.wv.vectors
 # import PCA
 from sklearn.decomposition import PCA

@@ -35,6 +35,7 @@ for i, k in tqdm(enumerate(corpus.klub.unique())):
 club_dict = {k: v for k, v in zip(corpus.klub.unique(), club_vecs)}
 del club_dict[np.nan]
 
+club_dict['PiS']
 # get vectors
 X = np.array([club_dict[k] for k in club_dict.keys()])
 
